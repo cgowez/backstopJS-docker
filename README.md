@@ -9,7 +9,7 @@ BackstopJS automates visual regression testing of your responsive web UI by comp
 
 ### Versioning
 
-* BackstopJS v3 with Chrome Headless support
+* BackstopJS v4 with Chrome Headless support
 
 
 ### Pre-requisites ###
@@ -68,6 +68,6 @@ Just add the following lines to the backstop.json file:
 ```
 "engineOptions": {
   "ignoreHTTPSErrors": false,
-  "args": ["--no-sandbox", "--disable-setuid-sandbox"]
+  "args": ["--no-sandbox", "--headless", "--disable-gpu", "--disable-setuid-sandbox"]
 }
 ```

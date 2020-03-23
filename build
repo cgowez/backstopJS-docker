@@ -1,0 +1,10 @@
+#!/bin/bash
+IMAGE_NAME='backstop-docker'
+VOLUME_NAME='backstop-docker-volume'
+
+docker build -t $IMAGE_NAME .
+build=$!
+wait $build
+docker run -d --name $VOLUME_NAME -v $(pwd):/src --shm-size=2gb $IMAGE_NAME:latest
+volume=$!
+wait $volume

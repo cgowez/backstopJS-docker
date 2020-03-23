@@ -1,0 +1,7 @@
+#!/bin/bash
+IMAGE_NAME='backstop-docker'
+VOLUME_NAME='backstop-docker-volume'
+
+docker run -it --shm-size=2gb --volumes-from $VOLUME_NAME $IMAGE_NAME:latest $@
+RESULT=$?
+exit $RESULT
